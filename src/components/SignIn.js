@@ -82,8 +82,8 @@ function SignIn() {
       >
         <div className={classes.modalContent}>
             <form onSubmit={handleSubmit}>
-            <TextField label="Email" type="email" required />
-            <TextField label="Password" type="password" required />
+            <TextField name="email" label="Email" type="email" required />
+            <TextField name="password" label="Password" type="password" required />
             {validationError && <div>{validationError}</div>}
             {serverError && <div>{serverError}</div>}
             {networkError && <div>{networkError}</div>}

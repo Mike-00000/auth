@@ -43,6 +43,8 @@ function SignUp() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
+    const first_name = formData.get('first_name');
+    const last_name = formData.get('last_name');
     const email = formData.get('email');
     const password = formData.get('password');
     const confirmPassword = formData.get('confirmPassword');
@@ -74,7 +76,7 @@ function SignUp() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password, first_name, last_name }),
       });
   
       const data = await response.json();
@@ -110,11 +112,11 @@ function SignUp() {
       >
         <div className={classes.modalContent}>
             <form onSubmit={handleSubmit}>
-                <TextField name="first name" label="First Name" type='text' required />
-                <TextField name="last name" label="Last Name" type='text' required />
+                <TextField name="first_name" label="First Name" type='text' required />
+                <TextField name="last_name" label="Last Name" type='text' required />
                 <TextField name="email" label="Email" type="email" required />
                 <TextField name="password" label="Password" type="password" required />
-                <TextField name="confirmPassword" label="Confirm Password" type="password" name="confirmPassword" required />
+                <TextField name="confirmPassword" label="Confirm Password" type="password" required />
                 {validationError && <div style={{ color: 'red', marginTop: '10px' }}>{validationError}</div>}
                 {serverError && <div>{serverError}</div>}
                 {networkError && <div>{networkError}</div>}
