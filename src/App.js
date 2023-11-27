@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Dashboard from './components/Dashboard';
 import HomePage from './components/HomePage';
 import { ThemeProvider } from '@mui/material/styles';
+import { DashboardProvider } from './components/DashboardContext';
 import theme from './components/theme';
 import './App.css';
 
@@ -13,6 +14,7 @@ import './App.css';
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <DashboardProvider>
         <div className="App">
           <Navbar />
           <Routes>
@@ -21,6 +23,7 @@ function App() {
           </Routes>
           <Footer />
         </div>
+      </DashboardProvider>
     </ThemeProvider>
   );
 }

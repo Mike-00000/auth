@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Button, Modal, TextField } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
+import DashboardContext from './DashboardContext';
 
 const useStyles = makeStyles((theme) => ({
     modalContent: {
@@ -19,6 +20,8 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 function SignIn() {
+  const { setCurrentUser } = useContext(DashboardContext);
+
     const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [validationError, setValidationError] = useState('');
@@ -55,9 +58,11 @@ function SignIn() {
       });
   
       const data = await response.json();
+      console.log("Data:", data)
       if (response.ok) {
         console.log('Successful connection:', data);
         localStorage.setItem('accessToken', data.accessToken); 
+        setCurrentUser({ firstName: data.firstName, lastName: data.lastName });
         handleClose();
         navigate('/dashboard');
 
