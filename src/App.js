@@ -13,8 +13,8 @@ import './App.css';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <DashboardProvider>
+    <DashboardProvider>
+      <ThemeProvider theme={theme}>
         <div className="App">
           <Navbar />
           <Routes>
@@ -23,8 +23,9 @@ function App() {
           </Routes>
           <Footer />
         </div>
-      </DashboardProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </DashboardProvider>
+    
   );
 }
 

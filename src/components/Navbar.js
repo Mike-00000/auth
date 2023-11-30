@@ -5,6 +5,7 @@ import { makeStyles } from '@mui/styles';
 import { useTheme } from '@mui/material/styles';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
+// import UseUser from './UseUser';
 import DashboardContext from './DashboardContext';
 
 const useStyles = makeStyles((theme) => ({
@@ -20,22 +21,23 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       justifyContent: 'space-between'
     }
-}));
+}));  
   
 
 function Navbar() {
   const { currentUser, setCurrentUser } = useContext(DashboardContext);
+    // const { user, loading, logoutUser } = UseUser();
     const classes = useStyles();
     const theme = useTheme();
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
     const navigate = useNavigate();
-    useEffect(() => {
-      const token = localStorage.getItem('accessToken');
-      setIsAuthenticated(!!token); // Convertit la présence du token en valeur booléenne
-  }, []);
+
+    const isAuthenticated = !!currentUser;
+
     const handleLogout = () => {
       setCurrentUser(null);
-      localStorage.removeItem('accessToken'); // Supprime le jeton d'accès
+      localStorage.removeItem('access_token'); // Supprime le jeton d'accès
+      // UseUser(null); // Réinitialise l'état de l'utilisateur
+      // logoutUser();
       navigate('/'); // Redirige vers la page d'accueil
   };
     
@@ -46,7 +48,7 @@ function Navbar() {
               <Typography variant="h6" className={classes.title}>
               Enhance Performance through Better Organization
               </Typography>
-              {currentUser ? (
+              {isAuthenticated ? (
                 <Button color="inherit" onClick={handleLogout}>Logout</Button>
               ) : (
                 <>

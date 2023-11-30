@@ -11,7 +11,7 @@ export const DashboardProvider = ({ children }) => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-      const token = localStorage.getItem('accessToken');
+      const token = localStorage.getItem('access_token');
       if (token) {
         fetch('http://127.0.0.1:5000/user-info', {
         method: 'GET',
@@ -20,7 +20,12 @@ export const DashboardProvider = ({ children }) => {
             'Content-Type': 'application/json'
         }
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Token not valid or expired');
+        }
+        return response.json();
+    })
     .then(data => {
         if (data && data.firstName && data.lastName) {
             setCurrentUser({
@@ -32,14 +37,29 @@ export const DashboardProvider = ({ children }) => {
     })
     .catch(error => {
         console.error('Error fetching user data:', error);
-        // Gérer les erreurs, par exemple en effaçant le token si non valide
+        localStorage.removeItem('access_token'); // Effacer le token invalide
+        navigate('/login'); // Rediriger vers la page de connexion
     });
       }
-  }, []);
+  }, [navigate]);
 
+  const addOrganization = (newOrg) => {
+    setOrganizations(prevOrgs => [...prevOrgs, newOrg]);
+};
+
+    const deleteUser = (userId) => {
+    setUsers(prevUsers => prevUsers.filter(user => user.id !== userId));
+};
 
     return (
-        <DashboardContext.Provider value={{ currentUser, setCurrentUser, organizations, setOrganizations, users, setUsers }}>
+        <DashboardContext.Provider value={{ 
+            currentUser, 
+            setCurrentUser, 
+            organizations, 
+            addOrganization, 
+            users, 
+            deleteUser 
+        }}>
           {children}
         </DashboardContext.Provider>
       );
