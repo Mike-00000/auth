@@ -25,10 +25,18 @@ function CreateOrganizationForm() {
 
       const data = await response.json();
       console.log(data);
-      // Gérer la réponse ici, par exemple, afficher un message de succès ou d'erreur
+      if (response.ok) {
+        alert(data.message); // ou utiliser un composant de notification
+        // Réinitialiser le formulaire ici si nécessaire
+        setOrgName('');
+        setDescription('');
+        setCountry('');
+      } else {
+        alert(`Erreur : ${data.message}`); // ou utiliser un composant de notification pour afficher l'erreur
+      }
     } catch (error) {
       console.error('Error:', error);
-      // Gérer les erreurs de réseau ici
+      alert('Une erreur réseau s\'est produite'); // ou utiliser un composant de notification
     }
 
     // Reset des champs du formulaire

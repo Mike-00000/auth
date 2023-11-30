@@ -8,7 +8,12 @@ function AddUserToOrganizationForm() {
     e.preventDefault();
     // Logique pour ajouter un utilisateur à une organisation
     console.log({ userEmail, orgName });
-    const userData = { userEmail, orgName };
+    // const userData = { userEmail, orgName };
+    const userData = { 
+      user_email: userEmail, // Assurez-vous que ceci correspond à la clé attendue par le backend
+      org_name: orgName      // Assurez-vous que ceci correspond à la clé attendue par le backend
+    };
+    
 
     try {
       const response = await fetch('http://127.0.0.1:5000/add-user-to-org', {
