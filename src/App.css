@@ -7,9 +7,38 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* img {
-  width: 70px;
-} */
+.bg1 {
+  background-color: #b4a990;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bg2 {
+  background-color: #9ba4b9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bg3 {
+  background-color: #b4a990;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bg4 {
+  background-color: #9ba4b9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.organization-item {
+  background-color: #f9f9f9;
+}
+.organization-item:hover {
+  background-color: #be7c18;
+  /* cursor: pointer; */
+}
 
 footer {
   background-color: #333;

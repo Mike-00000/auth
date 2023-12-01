@@ -22,9 +22,10 @@ function DashboardHeader() {
   // console.log(currentUser);
 
   return (
-    <div>
-      <h1>Dashboard Header</h1>
-      <p>Welcome, {currentUser.firstName} {currentUser.lastName}</p>
+    <div style={{ textAlign: 'center' }}>
+      <h1>Dashboard</h1>
+      <h3>Welcome, {currentUser.firstName} {currentUser.lastName}!</h3>
+      <p>What do you want to do?</p>
       {/* {currentUser && (
         <p>Welcome, {currentUser.firstName} {currentUser.lastName}</p>
       )} */}

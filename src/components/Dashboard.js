@@ -6,6 +6,7 @@ import DashboardHeader from './DashboardHeader';
 import CreateOrganizationForm from './CreateOrganizationForm';
 import AddUserToOrganizationForm from './AddUserToOrganizationForm';
 import OrganizationList from './OrganizationList';
+import FormContainer from './FormContainer';
 // import UseUser from './UseUser'
 
 function Dashboard() {
@@ -30,8 +31,9 @@ function Dashboard() {
         {/* <h1>Tableau de bord</h1>
         <p>Bienvenue, {user.firstName} {user.lastName}</p> */}
         {/* Autres éléments de votre tableau de bord */}
-        <CreateOrganizationForm user={currentUser} />
-        <AddUserToOrganizationForm user={currentUser} />
+        {/* <CreateOrganizationForm user={currentUser} />
+        <AddUserToOrganizationForm user={currentUser} /> */}
+        <FormContainer currentUser={currentUser} />
         <OrganizationList user={currentUser} />
     </div>
   );

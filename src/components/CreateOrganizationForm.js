@@ -82,7 +82,7 @@ function CreateOrganizationForm() {
 //   );
 // }
 return (
-  <Paper style={{ padding: '2rem', margin: '2rem 0' }}>
+  <Paper style={{ padding: '2rem', margin: '2rem auto', width: '35%' }}>
     <Typography variant="h5">Create Organization</Typography>
     <form onSubmit={handleSubmit} style={{ marginTop: '1rem' }}>
       <TextField

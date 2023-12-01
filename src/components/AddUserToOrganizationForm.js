@@ -52,26 +52,36 @@ function AddUserToOrganizationForm() {
   };
 
   return (
-    <div>
-      <h1>Add User to Organization</h1>
-      <form onSubmit={handleSubmit}>
-        <input
+    <Paper style={{ padding: '2rem', margin: '2rem auto', width: '35%' }}>
+      <Typography variant="h5">Add User to Organization</Typography>
+      <form onSubmit={handleSubmit} style={{ marginTop: '1rem' }}>
+        <TextField
+          label="User Email"
           type="email"
+          variant="outlined"
+          fullWidth
+          margin="normal"
           value={userEmail}
           onChange={(e) => setUserEmail(e.target.value)}
-          placeholder="User Email"
           required
         />
-        <input
+        <TextField
+          label="Organization Name"
           type="text"
+          variant="outlined"
+          fullWidth
+          margin="normal"
           value={orgName}
           onChange={(e) => setOrgName(e.target.value)}
-          placeholder="Organization Name"
           required
         />
-        <button type="submit">Add User</button>
+        <Box marginTop={2}>
+          <Button type="submit" color="primary" variant="contained">
+            Add User
+          </Button>
+        </Box>
       </form>
-    </div>
+    </Paper>
   );
 }
 
