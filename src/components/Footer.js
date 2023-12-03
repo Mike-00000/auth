@@ -6,7 +6,8 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-section about">
           <h3>About Us</h3>
-          <p>Some words about your company or website.</p>
+          <p>Founded in 2003</p>
+          <p>Enhance Performance through Better Organization</p>
         </div>
         <div className="footer-section links">
           <h3>Useful Links</h3>

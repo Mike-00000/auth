@@ -26,7 +26,7 @@ function Dashboard() {
   }
 
   return (
-    <div>
+    <div className='dashboard_main' style={{ backgroundColor: '#d3c7ab'}}>
         <DashboardHeader />
         {/* <h1>Tableau de bord</h1>
         <p>Bienvenue, {user.firstName} {user.lastName}</p> */}

@@ -6,7 +6,6 @@ const theme = createTheme({
     customColor2: '#B28F43',
     // autres personnalisations...
   },
-  // ... autres options de personnalisation du thème
 });
 
 export default theme;

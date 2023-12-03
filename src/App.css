@@ -5,28 +5,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #d3c7ab;
 }
 
 .bg1 {
-  background-color: #b4a990;
+  background-color: #d3c7ab;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .bg2 {
-  background-color: #9ba4b9;
+  background-color: #bfc1c7;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .bg3 {
-  background-color: #b4a990;
+  background-color: #d3c7ab;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .bg4 {
-  background-color: #9ba4b9;
+  background-color: #bfc1c7;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,6 +39,30 @@ body {
 .organization-item:hover {
   background-color: #be7c18;
   /* cursor: pointer; */
+}
+
+.about-section {
+  position: relative;
+  text-align: center; /* Centre le texte horizontalement */
+}
+
+.about-background {
+  width: 100%;
+  height: auto; /* Assurez-vous que l'image couvre la largeur */
+  opacity: 10; /* Vous pouvez ajuster l'opacité pour améliorer la visibilité du texte */
+}
+
+.about-text-container {
+  position: absolute;
+  top: 40%; /* Centrer verticalement */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Changer selon la couleur de votre choix */
+  /* Ajouter plus de styles si nécessaire */
+}
+
+.about-text-container h1 {
+  font-size: 35px;
 }
 
 footer {
