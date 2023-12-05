@@ -35,52 +35,23 @@ function CreateOrganizationForm() {
       const data = await response.json();
       console.log(data);
       if (response.ok) {
-        alert(data.message); // ou utiliser un composant de notification
-        // Réinitialiser le formulaire ici si nécessaire
+        alert(data.message); 
         setOrgName('');
         setDescription('');
         setCountry('');
       } else {
-        alert(`Erreur : ${data.message}`); // ou utiliser un composant de notification pour afficher l'erreur
+        alert(`Erreur : ${data.message}`); 
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('Une erreur réseau s\'est produite'); // ou utiliser un composant de notification
+      alert('Une erreur réseau s\'est produite'); 
     }
 
-    // Reset des champs du formulaire
     setOrgName('');
     setDescription('');
     setCountry('');
   };
 
-//   return (
-//     <div>
-//       <h1>Create Organization</h1>
-//       <form onSubmit={handleSubmit}>
-//         <input
-//           type="text"
-//           value={orgName}
-//           onChange={(e) => setOrgName(e.target.value)}
-//           placeholder="Organization Name"
-//           required
-//         />
-//         <textarea
-//           value={description}
-//           onChange={(e) => setDescription(e.target.value)}
-//           placeholder="Description"
-//         />
-//         <input
-//           type="text"
-//           value={country}
-//           onChange={(e) => setCountry(e.target.value)}
-//           placeholder="Country"
-//         />
-//         <button type="submit">Create</button>
-//       </form>
-//     </div>
-//   );
-// }
 return (
   <Paper style={{ padding: '2rem', margin: '2rem auto', width: '35%' }}>
     <Typography variant="h5">Create Organization</Typography>

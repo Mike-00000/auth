@@ -14,12 +14,11 @@ function AddUserToOrganizationForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Logique pour ajouter un utilisateur à une organisation
     console.log({ userEmail, orgName });
     // const userData = { userEmail, orgName };
     const userData = { 
-      user_email: userEmail, // Assurez-vous que ceci correspond à la clé attendue par le backend
-      org_name: orgName      // Assurez-vous que ceci correspond à la clé attendue par le backend
+      user_email: userEmail, 
+      org_name: orgName      
     };
     
 
@@ -28,7 +27,7 @@ function AddUserToOrganizationForm() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('access_token')}`, // Ajouter le token JWT ici si nécessaire
+          'Authorization': `Bearer ${localStorage.getItem('access_token')}`, 
         },
         body: JSON.stringify(userData),
       });
@@ -39,15 +38,13 @@ function AddUserToOrganizationForm() {
 
       const responseData = await response.json();
       console.log(responseData);
-      // Ici, vous pouvez gérer la réponse, par exemple, afficher un message de succès
+      // à l'occasion, rajouter un message de succès !
 
-      // Réinitialisation du formulaire
-      // Reset des champs du formulaire
       setUserEmail('');
       setOrgName('');
     } catch (error) {
       console.error('Error during submission:', error);
-      // Gérer les erreurs, par exemple, afficher un message d'erreur
+      // à l'occasion, rajouter des messages d'erreurs !
     }
   };
 

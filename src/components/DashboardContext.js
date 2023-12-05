@@ -31,14 +31,14 @@ export const DashboardProvider = ({ children }) => {
             setCurrentUser({
                 firstName: data.firstName,
                 lastName: data.lastName
-                // Ajoutez d'autres champs si nécessaire
+                
             });
         }
     })
     .catch(error => {
         console.error('Error fetching user data:', error);
-        localStorage.removeItem('access_token'); // Effacer le token invalide
-        navigate('/login'); // Rediriger vers la page de connexion
+        localStorage.removeItem('access_token'); 
+        navigate('/login'); 
     });
       }
   }, [navigate]);

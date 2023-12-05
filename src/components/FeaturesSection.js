@@ -4,7 +4,7 @@ import { Container, Typography, Grid, TextField, Button, FormControl } from "@mu
 
 function FeaturesSection() {
   return (
-    <div className="features-section" style={{ position: "relative", minHeight: "110vh" }}>
+    <div id="f-section" className="features-section" style={{ position: "relative", minHeight: "110vh" }}>
       <img src="/imgfeatures3.avif" alt="features_image" className="features_bg" style={{ position: "absolute", width: "100%", height: "auto", zIndex: -1 }}></img>
         
         <div className="features_container" style={{ position: 'absolute', top: '40%', left: '50%', transform: 'translate(-50%, -50%)', marginTop: "5%" }}>
@@ -21,10 +21,10 @@ function FeaturesSection() {
             </div>
 
             {/* Formulaire visuel Material-UI */}
-            <div style={{ textAlign: "center", marginTop: "20px", marginBottom: "30px" }}>
+            <div className="formfeatures" style={{ textAlign: "center", marginTop: "20px", marginBottom: "30px" }}>
                 
             <Typography variant="h5">Want to know more ? Leave your email:</Typography>
-            <TextField
+            <TextField className="textfield"
                 type="email"
                 variant="outlined"
                 margin="normal"
@@ -36,23 +36,25 @@ function FeaturesSection() {
                 autoComplete="email"
                 InputLabelProps={{
                     style: {
-                    //   backgroundColor: "white", // Fond de l'étiquette en blanc
+                    //   backgroundColor: "white",
                     borderColor: "white",
                     },
                   }}
                   style={{
-                    // backgroundColor: "white", // Fond du champ en blanc
-                    borderColor: "white", // Bordure en blanc
-
+                    backgroundColor: "white", 
+                    borderColor: "white", 
+                    maxWidth: "400px", 
+                    margin: "0 auto", 
                   }}
     
             />
-            <Button
+            <Button className="ffbutton"
                 type="submit"
                 variant="contained"
                 color="primary"
                 size="large"
                 fullWidth
+                style={{ maxWidth: "400px", margin: "0 auto" }} 
             >
                 Submit
             </Button>

@@ -65,6 +65,10 @@ body {
   font-size: 35px;
 }
 
+.features_section {
+  min-height: 110vh !important;
+}
+
 footer {
   background-color: #333;
   color: #fff;
@@ -101,3 +105,132 @@ footer {
   border-top: 1px solid #444;
   padding-top: 10px;
 }
+
+
+
+
+@media screen and (max-width: 1220px) {
+  /* Styles pour les écrans de largeur maximale de 1220px et moins */
+  .about-text-container {
+    margin-top: 10%;
+    /* margin-bottom: 10%; */
+  }
+  .about-section p {
+    font-size: 14px !important; /* Ajustez la taille de la police en conséquence */
+  }
+  #f-section {
+    min-height: 90vh !important;
+  }
+  .features_container {
+    margin-top: -50px !important;
+    /* margin-bottom: -500px !important; */
+    /* min-height: 70vh; */
+  }
+}
+
+@media screen and (max-width: 952px) {
+  .homeintro {
+    margin-top: 10%;
+  }
+  .homeintro h1 {
+    font-size: 2rem !important;
+  }
+  .homeintro h3 {
+    font-size: 1rem !important; 
+  }
+  .about-text-container {
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+  .about-section p {
+    font-size: 12px !important; /* Ajustez la taille de la police en conséquence */
+    margin-bottom: -0px !important;
+  }
+  .about-section h1 {
+    font-size: 16px !important; /* Ajustez la taille de la police en conséquence */
+    margin-bottom: -0px !important;
+  }
+  .features_container {
+    /* margin-top: -130px !important; */
+    /* min-height: 150vh; */
+  }
+  .formfeatures {
+    margin-top: -50px !important;
+  }
+}
+
+@media screen and (max-width: 741px) {
+  .features_container h1{
+    /* margin-top: -50px; */
+    font-size: 20px !important;
+  }
+  .features_container h2{
+    font-size: 15px !important;
+  }
+  .formfeatures h5{
+    font-size: 20px;
+  }
+  .textfield {
+    height: 40px !important;
+  }
+  .ffbutton {
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 592px) {
+  .about-section p {
+    font-size: 9px !important; /* Ajustez la taille de la police en conséquence */
+    margin-bottom: -0px !important;
+  }
+  .about-section h1 {
+    font-size: 12px !important; /* Ajustez la taille de la police en conséquence */
+    margin-bottom: -0px !important;
+    margin-top: 0 !important;
+  }
+  .features_container h1{
+    /* margin-top: -160px !important; */
+    font-size: 20px !important;
+  }
+  .formfeatures h5{
+    font-size: 10px;
+  }
+  .textfield {
+    height: 35px !important;
+  }
+  .ffbutton {
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 442px) {
+  .features_container h1{
+    /* margin-top: -230px !important; */
+    margin-bottom: -10px;
+    font-size: 20px !important;
+  }
+  .features_section {
+    /* max-height: 10vh !important; */
+  }
+}
+
+@media screen and (max-width: 403px) {
+  .homeintro h1 {
+    font-size: 1.5rem !important;
+  }
+  .homeintro h3 {
+    font-size: 0.5rem !important; 
+  }
+  .about-text-container {
+    width: 200px;
+  }
+  .about-section p {
+    font-size: 7px !important; /* Ajustez la taille de la police en conséquence */
+    margin-bottom: -0px !important;
+  }
+  .about-section h1 {
+    font-size: 10px !important; /* Ajustez la taille de la police en conséquence */
+    margin-bottom: -0px !important;
+    margin-top: 0 !important;
+  }
+} 

@@ -35,10 +35,10 @@ function Navbar() {
 
     const handleLogout = () => {
       setCurrentUser(null);
-      localStorage.removeItem('access_token'); // Supprime le jeton d'accès
-      // UseUser(null); // Réinitialise l'état de l'utilisateur
+      localStorage.removeItem('access_token');
+      // UseUser(null); 
       // logoutUser();
-      navigate('/'); // Redirige vers la page d'accueil
+      navigate('/');
   };
     
     return (

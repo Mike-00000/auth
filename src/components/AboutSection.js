@@ -7,25 +7,25 @@ function AboutSection() {
         left: 0,
         width: '100%',
         height: '100%',
-        background: 'rgba(0, 0, 0, 0.7)', // Couleur foncée semi-transparente
-        zIndex: 1, // Pour s'assurer que l'overlay est au-dessus du texte
+        background: 'rgba(0, 0, 0, 0.7)', 
+        zIndex: 1, 
         borderRadius: '15px',
     };
 
     const h1style = {
-        position: 'relative', // Pour que le texte apparaisse au-dessus de l'overlay
-        zIndex: 2, // Pour s'assurer que le texte est au-dessus de l'overlay
+        position: 'relative', 
+        zIndex: 2, 
         fontSize: '35px',
-        color: '#fff', // Couleur du texte
+        color: '#fff', 
         marginTop: '40px',
         marginBottom: '40px',
     }
 
     const textStyle = {
-        position: 'relative', // Pour que le texte apparaisse au-dessus de l'overlay
-        zIndex: 2, // Pour s'assurer que le texte est au-dessus de l'overlay
+        position: 'relative',
+        zIndex: 2, 
         fontSize: '18px',
-        color: '#fff', // Couleur du texte
+        color: '#fff', 
         marginBottom: '45px',
     };
     

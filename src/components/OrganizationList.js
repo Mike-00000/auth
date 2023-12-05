@@ -27,7 +27,7 @@ function OrganizationList() {
 
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '600px' }}>
       <h1>Organization List</h1>
       <h4>You will find below the organisations to which you belong</h4>
       {organizations.length === 0 ? (

@@ -26,10 +26,6 @@ function DashboardHeader() {
       <h1>Dashboard</h1>
       <h3>Welcome, {currentUser.firstName} {currentUser.lastName}!</h3>
       <p>What do you want to do?</p>
-      {/* {currentUser && (
-        <p>Welcome, {currentUser.firstName} {currentUser.lastName}</p>
-      )} */}
-      {/* Vous pouvez ajouter ici d'autres informations contextuelles si nécessaire */}
     </div>
   );
 }

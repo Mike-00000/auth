@@ -11,9 +11,9 @@ function FormContainer({ currentUser }) {
         flexWrap="wrap" 
         gap={0} 
         padding={0} 
-        style={{ width: '80%', margin: '0 auto' }}> {/* Réduire le gap ici */}
-        <CreateOrganizationForm user={currentUser} style={{ width: '45%' }} /> {/* Ajuster la largeur */}
-        <AddUserToOrganizationForm user={currentUser} style={{ width: '45%' }} /> {/* Ajuster la largeur */}
+        style={{ width: '80%', margin: '0 auto' }}> 
+        <CreateOrganizationForm user={currentUser} style={{ width: '45%' }} />
+        <AddUserToOrganizationForm user={currentUser} style={{ width: '45%' }} /> 
       </Box>
     );
   }

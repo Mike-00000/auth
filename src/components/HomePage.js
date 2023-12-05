@@ -11,7 +11,7 @@ function HomePage() {
       <HomeIntro />
       <AboutSection />
       <FeaturesSection />
-      <CallToAction />
+      {/* <CallToAction /> */}
     </div>
   );
 }
